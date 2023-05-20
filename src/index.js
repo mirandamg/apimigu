@@ -1,8 +1,12 @@
 const {getProducts} = require('../dboperations')
 const express = require('express')
+const cors = require('cors');
 //const dboperations = require('./dboperations')
 const app = express()
 const port = 3000
+
+app.use(cors());
+
 
 app.get('/', async (req, res) => {
   //res.send('Hello World!')
